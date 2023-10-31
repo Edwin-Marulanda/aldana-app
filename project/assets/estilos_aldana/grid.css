@@ -1,0 +1,18 @@
+.grid-container > canvas {
+    display: grid;
+    grid-template-columns: auto ;
+    gap: 10px;
+    margin: 370px;
+    left: 300px;
+    top: 0;
+    }
+  
+  .grid-container > div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    top: -715px;
+    left: 367px;
+    background-repeat: no-repeat;
+    
+  }

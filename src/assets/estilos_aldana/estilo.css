@@ -1,0 +1,445 @@
+
+        @import url('http://fonts.cdnfonts.com/css/source-sans-pro');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css');
+      
+    
+
+        .fondo{
+            background-color: #1a2435;
+        }
+
+
+
+        .menu{
+            
+            font-family: 'Source Sans Pro', sans-serif;                                
+            font-size: 18px;
+            font-weight:lighter;
+            background-color: #1a2435;
+            box-shadow: 16px 6px 10px 3px black;
+            position:absolute; 
+            padding-left: 24px; 
+            top:  102px;
+        }
+
+        #tipo{
+            font-family: 'Source Sans Pro', sans-serif;                                
+            font-size: 18px;
+            font-weight:lighter; 
+        }
+        /*--------------------*/
+        .icono img{
+           height: 42px;
+           width: 42px; 
+           
+        }
+
+        .icono_sm img{
+           height: 22px;
+           width: 22px; 
+           
+        }
+
+        .barra_ico  {
+        background-color: #1a2435;
+        height: 100%;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        
+                           
+        }
+
+        #l1, #l2{
+        float:left
+        }
+       
+
+---------------
+        .social-icons li {
+        font-size: 2.5em;
+        padding: 0.5em;
+        line-height: 1em;
+        }
+
+        
+        .submenu  {
+        height: 70px;
+        background-color: #29303a;
+        padding-left: 0x;
+        position:absolute;
+        left: 350px;
+        z-index: 2;
+              
+        }
+      
+        .submenu ul{
+        font-family: 'Source Sans Pro', sans-serif;                                
+        font-size: 14px;
+        font-weight:lighter;
+        text-align: center;
+        display:inline-flex;
+    }
+    .canvas{
+        background-color:#FC6D26;
+        z-index: 1;
+         }
+         
+        .boton1{
+        color: white;
+        font-size: 12px;
+        margin: 5px 8px;
+        padding-left: 6px;
+        padding-right: 4px;
+        outline: #FC6D26;
+        outline-width: 0.5px;
+        outline-style:solid;
+        width: 130px;
+        height: 40px;
+        display: block;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }       
+
+        .boton2{
+        color: white;
+        background-color: #FC6D26;
+        font-size: 12px;
+        margin: 5px 8px;
+        padding-left: 6px;
+        padding-right: 4px;
+        width: 150px;
+        height: 40px;
+        display: block;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        
+    }   
+    
+    .boton3{
+        color: white;
+        background-color: #FC6D26;
+        font-size: 10px;
+        margin: 5px 8px;
+        padding-left: 6px;
+        padding-right: 4px;
+        width: 84px;
+        height: 24px;
+        display: block;
+        border-bottom-left-radius: 2px;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        line-height: 1em;
+        
+    }   
+
+    /*canvas modificaciones*/
+    .card-body{
+   background: url(resources/img/lienzo.svg)no-repeat center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size:cover;
+   height: 100%;
+   width: 100%;
+    }  
+
+        /*codigo css accordion*/
+/* (A) TABS CONTAINER */
+.tab {
+  
+  z-index: 1;
+  top:62px;
+  max-width: 300px;
+  left: 83%;
+  
+  }
+
+  
+/* (B) HIDE CHECKBOX */
+.tab input { display: none; }
+
+/* (C) TAB LABEL */
+.tab label {
+  display: block;
+  margin-top: 15px;
+  padding: 5px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: lighter;
+  background-color: #1a2435;
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+
+/* (D) TAB CONTENT */
+.tab .tab-content {
+  background-color: #29303a;
+  /* CSS ANIMATION WILL NOT WORK WITH AUTO HEIGHT */
+  /* THIS IS WHY WE USE MAX-HEIGHT INSTEAD */
+  overflow: hidden;
+  transition: max-height 0.5s;
+  max-height: 0;
+  width: 335px;
+  left: 0;
+  padding-top: 5px;
+  font-size: 12px;
+  font-weight: lighter;
+  font-kerning: auto;
+}
+.tab .tab-content p { padding: 10px; }
+
+.tabcolor1{
+    background-color: #3d3538;
+    
+}
+.separator{
+      height: 1px;
+      /*border-bottom: solid 1px var(--hovercolor);*/
+      border-bottom: solid 1px #FC6D26;
+      margin: 15px 0;
+      }
+    
+      .icon_small_left{
+          position: absolute;
+          left: 15%;
+      }
+
+      .icon_small_right{
+          position: absolute;
+          right:  5em;
+      }
+
+/* (E) OPEN TAB ON CHECKED */
+.tab input:checked ~ .tab-content { max-height: 100vh; }
+
+/* (F) EXTRA - ADD ARROW INDICATOR */
+.tab label::after {
+  content: "\25b6";
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: block;
+  transition: all 0.6s;
+}
+.tab input:checked ~ label::after { transform: rotate(90deg); }
+
+/* (X) DOES NOT MATTER */
+html, body { font-family: source-sans-pro, sans-serif; }
+        /*cierre accordion */
+
+
+/* footer*/
+
+.menu_inferior{
+    position:absolute;
+    display: block;
+    top:100%;
+    left:300px;
+    height: 64PX;
+    width: 1242px;
+    background-color: #29303a;
+    color: white;     
+    font-family: source-sans-pro, sans-serif;
+    
+
+}
+
+                /* slider css*/
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: #fff;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+/*Codigo css menu izquierda*/
+
+      
+.nav-pills-custom .nav-link {
+    color: #aaa;
+    position: relative;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 13px;
+    text-align: center;
+      
+    
+}
+
+
+
+.nav-pills-custom .nav-link.active {
+    color: #fff;
+    background: #29303a;
+    margin-left: 5px;
+    width: auto;
+}
+
+
+/* Add indicator arrow for the active tab */
+@media (min-width: 992px) {
+    .nav-pills-custom .nav-link::before {
+        content: '';
+        display: block;
+        border-top: 8px solid transparent;
+        border-left: 15px solid white;
+        border-bottom: 8px solid transparent;
+        position:inherit;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+}
+
+.nav-pills-custom .nav-link.active::before {
+    opacity: 1;
+}
+
+.cont{
+   width: 1px;
+   left: 0;
+   
+}
+.icono_pq img{
+    
+         height: 34px;
+         width: 34px; 
+         }
+
+.info{
+   color: #aaa;
+   margin-top: 0;
+   left: 5%;
+   position:relative;
+   height: auto;
+}
+.menuder{
+    background-color: #fff; 
+    top: 6px; 
+    left: 1px;
+    position: relative; 
+    }
+
+.menuizq{
+    background-color:#999999; 
+    width: 300px;
+    left: 2px
+    
+}
+
+
+/* cierre menu*/ 
+
+/*Menu pequeño iconos de texto*/
+.menu_small {
+  display: flex;
+  justify-content: center;
+}
+
+.menu_small li {
+  margin-right: 10px;
+}
+
+.menu_small a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.menu_small a span {
+  transition: transform 0.2s ease-out;
+  font-size: small;
+}
+
+.menu_small a span:first-child {
+  display: inline-block;
+  padding: 1px;
+}
+
+.menu_small a span:last-child {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+}
+
+.menu_small i {
+  font-size: 12px;
+}
+
+.menu_small a:hover span:first-child {
+  transform: translateY(100%);
+}
+
+.menu_small a:hover span:last-child,
+.menu_small[data-animation] a:hover span:last-child {
+  transform: none;
+}
+
+/* ANIMATIONS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.menu_small[data-animation="to-top"] a span:last-child {
+  transform: translateY(100%);
+}
+
+.menu_small[data-animation="to-top"] a:hover span:first-child {
+  transform: translateY(-100%);
+}
+
+.menu_small[data-animation="to-right"] a span:last-child {
+  transform: translateX(-100%);
+}
+
+.menu_small[data-animation="to-right"] a:hover span:first-child {
+  transform: translateX(100%);
+}
+
+.menu_small[data-animation="to-left"] a span:last-child {
+  transform: translateX(100%);
+}
+
+.menu_small[data-animation="to-left"] a:hover span:first-child {
+  transform: translateX(-100%);
+}
+
+

@@ -1,0 +1,73 @@
+      
+.nav-pills-custom .nav-link {
+    color: #aaa;
+    position: relative;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 13px;
+    text-align: center;
+      
+    
+}
+
+
+
+.nav-pills-custom .nav-link.active {
+    color: #fff;
+    background: #29303a;
+    margin-left: 5px;
+    width: auto;
+}
+
+
+/* Add indicator arrow for the active tab */
+@media (min-width: 992px) {
+    .nav-pills-custom .nav-link::before {
+        content: '';
+        display: block;
+        border-top: 8px solid transparent;
+        border-left: 15px solid white;
+        border-bottom: 8px solid transparent;
+        position:inherit;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+}
+
+.nav-pills-custom .nav-link.active::before {
+    opacity: 1;
+}
+
+.cont{
+   width: 1px;
+   left: 0;
+   
+}
+.icono_pq img{
+        background-color: #29303a;
+         height: 34px;
+         width: 34px; 
+         }
+
+.info{
+   color: #aaa;
+   margin-top: 0;
+   left: 5%;
+   position:relative;
+   height: auto;
+}
+.menuder{
+    background-color: #fff; 
+    top: 6px; 
+    left: 1px;
+    position: relative; 
+    }
+
+.menuizq{
+    background-color:#999999; 
+    width: 300px;
+    left: 2px
+    
+}
+
+

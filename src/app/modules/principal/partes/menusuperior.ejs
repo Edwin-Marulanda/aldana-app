@@ -1,0 +1,416 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #29303a !important; height: 45px;">
+    <div class="container-fluid">
+        <div></div>
+        <ul class="navbar-nav  my-2 my-lg-0" style="font-size: 12px !important;">
+            <div style="font-size: 14px; color:#ffff; padding-top: 2%;">Etiquetas de impresión Rotulaser</div>
+
+            <li class="nav-item text-center">
+                <a class="nav-link active" style="color: white;" onclick="Copy()">
+                    <i class="fas fa-copy"></i>
+                    <div style="font-size: 10px;">
+                        Copiar
+                    </div>
+                </a>
+            </li>
+            <li class="nav-item text-center">
+                <a class="nav-link" style="color: white;" onclick="Paste()">
+                    <i class="fas fa-paste"></i>
+                    <div style="font-size: 10px;">pegar</div>
+                </a>
+            </li>
+            <li class="nav-item text-center">
+                <a class="nav-link" style="color: white;" onclick="eliminarSeleccion()"><i class="fas fa-trash-alt"></i>
+                    <div style="font-size: 10px;">Eliminar</div>
+                </a>
+            </li>
+            <li class="nav-item dropdown text-center">
+                <a class="nav-link" data-toggle="dropdown" style="color:white;"><i class="fas fa-sort"></i>
+                    <div style="font-size: 10px;">Organizar</div>
+                </a>
+                <ul class="dropdown-menu" style="background-color: #29303a !important">
+                    <li class="nav-item text-left">
+                        <a class="nav-link" style="color: white;" onclick="ordenarContenido('frente')">
+                            <div class="row g-0">
+                                <div class="col-2 text-left">
+                                    <i class="bi bi-front"></i>
+                                </div>
+                                <div class="col-7">
+                                    <div style="font-size: 12px;">
+                                        Traer al frente
+                                    </div>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: white;" onclick="ordenarContenido('adelante')">
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="fas fa-image fa-1x"></i>
+
+                                </div>
+                                <div class="col-6">
+                                    <div style="font-size: 12px;">
+                                        Traer adelante
+                                    </div>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item text-center">
+                        <a class="nav-link" style="color: white;" onclick="ordenarContenido('fondo')">
+                            <div class="row">
+                                <div class="col-2">
+
+                                </div>
+                                <div class="col-6">
+                                    <div style="font-size: 10px;">
+                                        Enviar al fondo
+                                    </div>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item text-center">
+                        <a class="nav-link" style="color: white;" onclick="ordenarContenido('atras')">
+                            <div class="row">
+                                <div class="col-2">
+
+                                    <i class="bi bi-back"></i>
+
+                                </div>
+                                <div class="col-6">
+                                    <div style="font-size: 10px;">
+                                        Enviar atras
+                                    </div>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown text-center">
+                <a class="nav-link" data-toggle="dropdown" style="color: white;"><i class="fas fa-image"></i>
+                    <div style="font-size: 10px;">
+                        Fondo
+                    </div>
+                </a>
+                <ul class="dropdown-menu" style="background-color: #29303a !important; ">
+                    <div class="view-container " style="color: #ffff !important;">
+                        <div>
+                            <div>
+
+                                <div>Esto agregará un color de
+                                    fondo.
+
+
+                                    <div>
+                                        <div class="dpo8-color-picker-view">
+                                            <div class="dpo8-color-picker-color-remover"><label
+                                                    class="dpo8-color-picker-color-label">
+                                                    <div class="color-square" data-action="no-fill"
+                                                        style="background-color: white">
+                                                        <div class="cross-line"></div>
+                                                    </div>
+
+                                                    <span data-action="no-fill" data-l10n-id="color-picker-no-fill">
+                                                        Seleccionar color</span>
+                                                    <input type="color" style="height: 24px; width: 24px;"
+                                                        id="colorFondo" value="#000000">
+
+                                                </label>
+
+                                                <div class="dpo8-spacer"></div>
+                                            </div>
+
+                                            <!--<div>
+                                                <div class="dpo8-color-picker-other sheet-selected">
+                                                    <span style="color: #ffff;">Colores</span>
+                                                    <ul class="dpo8-color-picker-other-list">
+                                                        <li data-hex="#010203" data-spot=""
+                                                            style="background-color: #010203" title="">
+
+                                                        </li>
+                                                        <li data-hex="#2b2b2b" data-spot=""
+                                                            style="background-color: #2b2b2b" title="">
+
+                                                        </li>
+                                                        <li data-hex="#555555" data-spot=""
+                                                            style="background-color: #555555" title="">
+
+                                                        </li>
+                                                        <li data-hex="#808080" data-spot=""
+                                                            style="background-color: #808080" title="">
+
+                                                        </li>
+                                                        <li data-hex="#aaaaaa" data-spot=""
+                                                            style="background-color: #aaaaaa" title="">
+
+                                                        </li>
+                                                        <li data-hex="#d5d5d5" data-spot=""
+                                                            style="background-color: #d5d5d5" title="">
+
+                                                        </li>
+                                                        <li data-hex="#ffffff" data-spot=""
+                                                            style="background-color: #ffffff" title="">
+
+                                                        </li>
+                                                        <li data-hex="#e60e16" data-spot=""
+                                                            style="background-color: #e60e16" title="">
+
+                                                        </li>
+                                                        <li data-hex="#f59300" data-spot=""
+                                                            style="background-color: #f59300" title="">
+
+                                                        </li>
+                                                        <li data-hex="#ffef00" data-spot=""
+                                                            style="background-color: #ffef00" title="">
+
+                                                        </li>
+                                                        <li data-hex="#009846" data-spot=""
+                                                            style="background-color: #009846" title="">
+
+                                                        </li>
+                                                        <li data-hex="#00a0e4" data-spot=""
+                                                            style="background-color: #00a0e4" title="">
+
+                                                        </li>
+                                                        <li data-hex="#232e84" data-spot=""
+                                                            style="background-color: #232e84" title="">
+
+                                                        </li>
+                                                        <li data-hex="#e7007e" data-spot=""
+                                                            style="background-color: #e7007e" title="">
+
+                                                        </li>
+                                                        <li data-hex="#40160c" data-spot=""
+                                                            style="background-color: #40160c" title="">
+
+                                                        </li>
+                                                        <li data-hex="#58361a" data-spot=""
+                                                            style="background-color: #58361a" title="">
+
+                                                        </li>
+                                                        <li data-hex="#403d19" data-spot=""
+                                                            style="background-color: #403d19" title="">
+
+                                                        </li>
+                                                        <li data-hex="#0f3f25" data-spot=""
+                                                            style="background-color: #0f3f25" title="">
+
+                                                        </li>
+                                                        <li data-hex="#003f4a" data-spot=""
+                                                            style="background-color: #003f4a" title="">
+
+                                                        </li>
+                                                        <li data-hex="#1d203d" data-spot=""
+                                                            style="background-color: #1d203d" title="">
+
+                                                        </li>
+                                                        <li data-hex="#3f1637" data-spot=""
+                                                            style="background-color: #3f1637" title="">
+
+                                                        </li>
+                                                        <li data-hex="#7f3f42" data-spot=""
+                                                            style="background-color: #7f3f42" title="">
+
+                                                        </li>
+                                                        <li data-hex="#806640" data-spot=""
+                                                            style="background-color: #806640" title="">
+
+                                                        </li>
+                                                        <li data-hex="#807b3f" data-spot=""
+                                                            style="background-color: #807b3f" title="">
+
+                                                        </li>
+                                                        <li data-hex="#3f7f5d" data-spot=""
+                                                            style="background-color: #3f7f5d" title="">
+
+                                                        </li>
+                                                        <li data-hex="#416c80" data-spot=""
+                                                            style="background-color: #416c80" title="">
+
+                                                        </li>
+                                                        <li data-hex="#404781" data-spot=""
+                                                            style="background-color: #404781" title="">
+
+                                                        </li>
+                                                        <li data-hex="#814164" data-spot=""
+                                                            style="background-color: #814164" title="">
+
+                                                        </li>
+                                                        <li data-hex="#bf6063" data-spot=""
+                                                            style="background-color: #bf6063" title="">
+
+                                                        </li>
+                                                        <li data-hex="#bf9960" data-spot=""
+                                                            style="background-color: #bf9960" title="">
+
+                                                        </li>
+                                                        <li data-hex="#c0b960" data-spot=""
+                                                            style="background-color: #c0b960" title="">
+
+                                                        </li>
+                                                        <li data-hex="#63bc8b" data-spot=""
+                                                            style="background-color: #63bc8b" title="">
+
+                                                        </li>
+                                                        <li data-hex="#60a3be" data-spot=""
+                                                            style="background-color: #60a3be" title="">
+
+                                                        </li>
+                                                        <li data-hex="#5e68ac" data-spot=""
+                                                            style="background-color: #5e68ac" title="">
+
+                                                        </li>
+                                                        <li data-hex="#bf6094" data-spot=""
+                                                            style="background-color: #bf6094" title="">
+
+                                                        </li>
+                                                        <li data-hex="#f27f85" data-spot=""
+                                                            style="background-color: #f27f85" title="">
+
+                                                        </li>
+                                                        <li data-hex="#fecd81" data-spot=""
+                                                            style="background-color: #fecd81" title="">
+
+                                                        </li>
+                                                        <li data-hex="#fff797" data-spot=""
+                                                            style="background-color: #fff797" title="">
+
+                                                        </li>
+                                                        <li data-hex="#aed6b2" data-spot=""
+                                                            style="background-color: #aed6b2" title="">
+
+                                                        </li>
+                                                        <li data-hex="#8cd3f6" data-spot=""
+                                                            style="background-color: #8cd3f6" title="">
+
+                                                        </li>
+                                                        <li data-hex="#7787c1" data-spot=""
+                                                            style="background-color: #7787c1" title="">
+
+                                                        </li>
+                                                        <li data-hex="#eb7faf" data-spot=""
+                                                            style="background-color: #eb7faf" title="">
+
+                                                        </li>
+                                                        <li data-hex="#f8bdc1" data-spot=""
+                                                            style="background-color: #f8bdc1" title="">
+
+                                                        </li>
+                                                        <li data-hex="#ffe7c1" data-spot=""
+                                                            style="background-color: #ffe7c1" title="">
+
+                                                        </li>
+                                                        <li data-hex="#fcf6c0" data-spot=""
+                                                            style="background-color: #fcf6c0" title="">
+
+                                                        </li>
+                                                        <li data-hex="#d7eada" data-spot=""
+                                                            style="background-color: #d7eada" title="">
+
+                                                        </li>
+                                                        <li data-hex="#c2e6f9" data-spot=""
+                                                            style="background-color: #c2e6f9" title="">
+
+                                                        </li>
+                                                        <li data-hex="#bec3e3" data-spot=""
+                                                            style="background-color: #bec3e3" title="">
+
+                                                        </li>
+                                                        <li data-hex="#f7c1d8" data-spot=""
+                                                            style="background-color: #f7c1d8" title="">
+
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>-->
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+                                <div class="buttons-container">
+                                    <button type="button" class="dpo8-button action save-changes disabled">
+                                        <span class="action-img"></span>
+                                        <span class="button-title" data-l10n-id="action-button-apply">Aceptar</span>
+                                    </button>
+
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                </ul>
+            </li>
+            <li class="nav-item dropdown text-center">
+                <a class="nav-link" data-toggle="dropdown" style="color: white;"><i class="fas fa-sync"></i>
+                    <div style="font-size: 10px;">
+                        Rotar
+
+                    </div>
+                </a>
+                <ul class="dropdown-menu" style="background-color: #29303a !important">
+                    <li class="nav-item text-left">
+                        <a class="nav-link" style="color: white;" onclick="rotarSeleccion('I')">
+                            <div class="row g-0">
+                                <div class="col-2 text-left">
+                                    <i class="fas fa-rotate-left"></i>
+                                </div>
+                                <div class="col-10">
+                                    <div style="font-size: 12px;">
+                                        Hacia la izquierda
+                                    </div>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item text-left">
+                        <a class="nav-link" style="color: white;" onclick="rotarSeleccion('D')">
+                            <div class="row g-0">
+                                <div class="col-2 text-left">
+                                    <i class="fas fa-rotate-right"></i>
+                                </div>
+                                <div class="col-10">
+                                    <div style="font-size: 12px;">
+                                       Hacia la derecha
+                                    </div>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item text-center">
+                <a class="nav-link" style="color: white;" onclick="activarGrid()"><i class="fas fa-th"></i>
+                    <div style="font-size: 10px;">
+                        Grid
+
+                    </div>
+                </a>
+            </li>
+
+
+        </ul>
+        <form class="d-flex" style="font-size: 12px !important;">
+            <button class="btn btn-sm text-white boton1" type="button" onclick="abrirImprimir()"><i class="fas fa-print"></i>
+                Imprimir</button>
+
+            <button class="btn btn-sm text-white boton2" type="button"><i class="fas fa-print"></i>
+                Imprimimos</button>
+
+        </form>
+    </div>
+</nav>

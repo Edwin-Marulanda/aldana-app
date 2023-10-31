@@ -1,0 +1,33 @@
+@import url('http://fonts.cdnfonts.com/css/source-sans-pro');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css');
+      
+           .fondo{
+            background-color: #1a2435;
+        }
+
+        .menu_nav{
+          top: 15px;
+          padding-left: 100px;
+          height: 72px;
+          color: white;
+        }
+        .layout {
+          width: 100%;
+          height: 768px;
+        
+          display: grid;
+          grid:
+            "left_sidebar canvas_contenedor rigth_sidebar" 100%
+            / 0.2fr 1fr 0.2fr;
+          gap: 8px;
+          grid-auto-flow: row dense;
+        
+          justify-content: space-evenly;
+        }
+        
+        .left_sidebar { grid-area: left_sidebar; }
+        .canvas_contenedor { grid-area: canvas_contenedor; }
+        .rigth_sidebar { grid-area: rigth_sidebar; }
+
+
+      /*efectos de animación panel izquierdo*/
